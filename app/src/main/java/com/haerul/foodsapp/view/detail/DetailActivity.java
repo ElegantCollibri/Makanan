@@ -6,13 +6,16 @@
  -----------------------------------------------------------------------------*/
 package com.haerul.foodsapp.view.detail;
 
+import android.content.Intent;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -25,6 +28,8 @@ import androidx.core.view.ViewCompat;
 import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.haerul.foodsapp.R;
+import com.haerul.foodsapp.Utils;
+import com.haerul.foodsapp.model.Meals;
 
 
 import butterknife.BindView;
@@ -32,7 +37,7 @@ import butterknife.ButterKnife;
 
 import static com.haerul.foodsapp.view.home.HomeActivity.EXTRA_DETAIL;
 
-public class DetailActivity extends AppCompatActivity { //TODO #11  implement DetailView
+public class DetailActivity extends AppCompatActivity implements DetailView {
 
     @BindView(R.id.toolbar)
     Toolbar toolbar;
@@ -78,9 +83,11 @@ public class DetailActivity extends AppCompatActivity { //TODO #11  implement De
 
         setupActionBar();
         
-        //TODO #9 Get data from the intent
+        Intent intent = getIntent();
+        String mealName = intent.getStringExtra(EXTRA_DETAIL);
+        DetailPresenter presenter = new DetailPresenter(this);
+        presenter.getMealById(mealName);
 
-        //TODO #10 Declare the presenter (put the name of the meal name from the data intent to the presenter)
         
     }
 
@@ -131,4 +138,23 @@ public class DetailActivity extends AppCompatActivity { //TODO #11  implement De
         }
     }
 
+    @Override
+    public void showLoading() {
+        progressBar.setVisibility(View.VISIBLE);
+    }
+
+    @Override
+    public void hideLoading() {
+        progressBar.setVisibility(View.INVISIBLE);
+    }
+
+    @Override
+    public void setMeal(Meals.Meal meal) {
+        Log.w("TAG name",meal.getStrMeal());
+    }
+
+    @Override
+    public void onErrorLoading(String message) {
+        Utils.showDialogMessage(this,"Error",message);
+    }
 }

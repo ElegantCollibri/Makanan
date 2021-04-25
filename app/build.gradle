@@ -7,11 +7,11 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 29
     defaultConfig {
         applicationId "com.haerul.foodsapp2"
         minSdkVersion 15
-        targetSdkVersion 28
+        targetSdkVersion 29
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -33,9 +33,9 @@ dependencies {
 
     //noinspection GradleCompatible
     implementation 'com.android.support:appcompat-v7:28.0.0'
-    implementation 'com.android.support:recyclerview-v7:28.0.0'
-    implementation 'com.android.support:cardview-v7:28.0.0'
-    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.android.support:recyclerview-v7:29.0.0'
+    implementation 'com.android.support:cardview-v7:29.0.0'
+    implementation 'com.android.support:design:29.0.0'
 
     implementation 'com.squareup.picasso:picasso:2.71828'
 
@@ -48,9 +48,9 @@ dependencies {
     implementation 'com.facebook.shimmer:shimmer:0.4.0'
 
     //noinspection GradleDependency
-    implementation 'com.jakewharton:butterknife:9.0.0'
+    implementation 'com.jakewharton:butterknife:10.0.0'
     //noinspection GradleDependency
-    annotationProcessor 'com.jakewharton:butterknife-compiler:9.0.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.0.0'
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
