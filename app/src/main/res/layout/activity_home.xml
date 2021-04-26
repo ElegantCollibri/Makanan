@@ -52,16 +52,19 @@
                 app:cardBackgroundColor="@color/colorPrimaryDark"
                 app:cardCornerRadius="10dp"
                 app:cardElevation="0dp">
-                <TextView
+
+                <EditText
+                    android:id="@+id/searchInput"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:padding="10dp"
-                    android:text="@string/search_your_recipes"
-                    android:textColor="@color/colorPrimaryLight"
-                    android:gravity="center_vertical"
-                    android:drawableLeft="@drawable/ic_search_primary_light"
                     android:drawableStart="@drawable/ic_search_primary_light"
-                    android:drawablePadding="10dp"/>
+                    android:drawableLeft="@drawable/ic_search_primary_light"
+                    android:drawablePadding="10dp"
+                    android:gravity="center_vertical"
+                    android:hint="@string/search_your_recipes"
+                    android:importantForAutofill="no"
+                    android:padding="10dp"
+                    android:textColor="@color/colorPrimaryLight" />
             </androidx.cardview.widget.CardView>
 
             <androidx.viewpager.widget.ViewPager
@@ -102,7 +105,8 @@
                 android:layout_marginRight="8dp"
                 android:layout_marginBottom="50dp" />
 
-             <include android:id="@+id/shimmerCategory"
+            <include
+                android:id="@+id/shimmerCategory"
                 layout="@layout/item_recycler_category_shimmer" />
 
             <TextView

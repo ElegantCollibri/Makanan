@@ -16,4 +16,16 @@
     <string name="youtube">YOUTUBE</string>
     <string name="source">SOURCE</string>
     <string name="favorite">Favorite</string>
+    <string name="password">Password</string>
+    <string name="dont_have_account">No Account yet? create One</string>
+    <string name="username">Username</string>
+    <string name="login">Login</string>
+    <string name="user_name">User name</string>
+    <string name="no_account_yet_create_one">No Account yet? create One</string>
+    <string name="konf_password">Konfirmasi Password</string>
+    <string name="register">Register</string>
+    <string name="email">Email</string>
+    <string name="sudah_punya_akun">Sudah Punya Akun? Klik disini</string>
+    <string name="ex_email">ex: nug@gmail.com</string>
+    <string name="belum_punya_akun">Belum punya akun? Daftar sekarang</string>
 </resources>
