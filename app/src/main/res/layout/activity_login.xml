@@ -11,15 +11,16 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="180dp"
-        android:text="Login"
-        android:paddingVertical="35dp"
-        android:textAlignment="center"
-        android:textSize="60sp"
-        android:fontFamily="cursive"
-        android:textColor="@color/colorPrimaryText"
-        android:background="@drawable/foodlogin"
         android:layout_marginBottom="25dp"
-        android:gravity="center_horizontal" />
+        android:background="@drawable/foodlogin"
+        android:fontFamily="cursive"
+        android:gravity="center_horizontal"
+        android:paddingVertical="35dp"
+        android:text="Login"
+        android:textAlignment="center"
+        android:textColor="@color/colorWhite"
+        android:textSize="60sp" />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_marginHorizontal="30dp"
@@ -62,7 +63,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="No Account yet? create One"
+        android:text="Sudah Punya Akun? Klik disini"
         android:layout_marginHorizontal="30dp"
         android:textAlignment="center"
         android:gravity="center_horizontal" />

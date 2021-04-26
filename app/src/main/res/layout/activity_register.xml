@@ -11,12 +11,12 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="180dp"
-        android:text="Login"
+        android:text="Register"
         android:paddingVertical="35dp"
         android:textAlignment="center"
         android:textSize="60sp"
         android:fontFamily="cursive"
-        android:textColor="@color/colorPrimaryText"
+        android:textColor="@color/colorWhite"
         android:background="@drawable/foodregister"
         android:layout_marginBottom="25dp"
         android:gravity="center_horizontal" />
@@ -37,6 +37,19 @@
         android:layout_width="match_parent"
         android:layout_marginHorizontal="30dp"
         android:layout_height="wrap_content"
+        android:text="Email"
+        android:textColor="@color/colorAccent"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="ex: nug@gmail.com"
+        android:layout_marginHorizontal="30dp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="30dp"
+        android:layout_height="wrap_content"
         android:text="Password"
         android:textColor="@color/colorAccent"
         />
@@ -49,11 +62,27 @@
         android:paddingVertical="20dp"
         android:layout_marginHorizontal="30dp"
         />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="30dp"
+        android:layout_height="wrap_content"
+        android:text="Konfirmasi Password"
+        android:textColor="@color/colorAccent"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Konfirmasi Password"
+        android:inputType="textPassword"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="20dp"
+        android:layout_marginHorizontal="30dp"
+        />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Login"
+        android:text="Register"
         android:layout_marginHorizontal="30dp"
         android:layout_marginVertical="20dp"
         android:background="@drawable/button_bg"
@@ -62,7 +91,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="No Account yet? create One"
+        android:text="Sudah Punya Akun? Klik disini"
         android:layout_marginHorizontal="30dp"
         android:textAlignment="center"
         android:gravity="center_horizontal" />
