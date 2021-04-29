@@ -9,6 +9,7 @@ package com.haerul.foodsapp.view.home;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -41,6 +42,8 @@ public class HomeActivity extends AppCompatActivity implements HomeView {
     ViewPager viewPagerMeal;
     @BindView(R.id.recyclerCategory)
     RecyclerView recyclerViewCategory;
+    @BindView(R.id.searchInput)
+    EditText recyclerViewCategory;
 
     HomePresenter presenter;
 

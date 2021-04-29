@@ -7,6 +7,33 @@
 package com.haerul.foodsapp.view.login;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
 
-public class RegisterActivity extends Activity {
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.haerul.foodsapp.R;
+
+public class RegisterActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_register);
+
+    }
+
+    public void regist(View view) {
+        this.finish();
+        Intent intent = new Intent(this, LoginActivity.class);
+        startActivity(intent);
+    }
+
+    public void switchLogin(View view) {
+        this.finish();
+        Intent intent = new Intent(this, LoginActivity.class);
+        startActivity(intent);
+    }
 }
