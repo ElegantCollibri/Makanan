@@ -6,6 +6,8 @@
  -----------------------------------------------------------------------------*/
 package com.haerul.foodsapp.view.detail;
 
+import androidx.annotation.NonNull;
+
 import com.haerul.foodsapp.Utils;
 import com.haerul.foodsapp.model.Meals;
 
@@ -26,7 +28,7 @@ public class DetailPresenter {
         Utils.getApi().getMealByName(mealName)
                         .enqueue(new Callback<Meals>() {
                             @Override
-                            public void onResponse(Call<Meals> call, Response<Meals> response) {
+                            public void onResponse(@NonNull Call<Meals> call,@NonNull Response<Meals> response) {
                                 view.hideLoading();
                                 if(response.isSuccessful()&&response.body()!=null){
                                     view.setMeal(response.body().getMeals().get(0));
@@ -36,7 +38,7 @@ public class DetailPresenter {
                             }
 
                             @Override
-                            public void onFailure(Call<Meals> call, Throwable t) {
+                            public void onFailure(@NonNull Call<Meals> call,@NonNull Throwable t) {
                                 view.hideLoading();
                                 view.onErrorLoading(t.getLocalizedMessage());
                             }

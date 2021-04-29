@@ -42,8 +42,7 @@ public class HomeActivity extends AppCompatActivity implements HomeView {
     ViewPager viewPagerMeal;
     @BindView(R.id.recyclerCategory)
     RecyclerView recyclerViewCategory;
-    @BindView(R.id.searchInput)
-    EditText recyclerViewCategory;
+
 
     HomePresenter presenter;
 
